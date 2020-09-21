@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-color: red;
+    border-color: $vividRed;
     border: none;
     font-family: "DIN";
     font-size: 5vw;
@@ -82,7 +82,7 @@
     .NavbarLarge {
       width: 100%;
       .BGImage {
-        background-color: lightgrey;
+        background-color: $lightGrey;
 
         z-index: 0;
         img {
@@ -172,7 +172,7 @@
 
   .FieldContainer {
     @extend %l_container;
-    background-color: $gray;
+    background-color: $grey;
 
     img {
       @extend %l_bookmark;
@@ -248,7 +248,7 @@
         text-align: left;
         font-size: 1.5vw;
         div {
-          background-color: hotpink;
+          background-color: $pink;
           color: white;
           display: inline-block;
           margin-right: 5%;
@@ -276,7 +276,7 @@
       button {
         display: block;
         width: 90%;
-        border-color: grey;
+        border-color: $lightGrey;
         background-color: white;
         height: 2.5em;
         margin: 5% auto;
@@ -293,14 +293,28 @@
 
   .Footer {
     width: 100%;
-    background-color: $gray;
+    background-color: $grey;
     display: grid;
+    position: relative;
 
     .Privacy {
-      text-align: left;
-      margin-left: 2em;
+      bottom: 2em;
+      right: 2em;
+      position: absolute;
+
       font-family: "GREG";
       font-size: 1vw;
+    }
+
+    .BackTop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: black;
+      color: white;
+      width: 2em;
+      height: 2em;
+      font-size: 3vw;
     }
 
     img {

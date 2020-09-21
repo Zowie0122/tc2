@@ -34,7 +34,9 @@ function Blog() {
           );
         })}
       </div>
-      <button className="MobileButton">BLOG</button>
+      <button className="MobileButton" data-aos="fade-up">
+        BLOG
+      </button>
     </div>
   );
 }

@@ -13,7 +13,11 @@ function BlogBox({ tag, date, imgSrc, title, text }) {
         <div>{tag}</div>
         <p>{date}</p>
       </div>
-      <img src={require(`../images/${imgSrc}.png`)} className="BlogImage" />
+      <img
+        src={require(`../images/${imgSrc}.png`)}
+        className="BlogImage"
+        alt="BlogImage"
+      />
       <h3>{title}</h3>
       <p>{text}</p>
       <button>MORE</button>

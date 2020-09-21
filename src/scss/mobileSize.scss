@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-color: red;
+    border-color: $vividRed;
     border: none;
     font-family: "DIN";
     font-size: 5vw;
@@ -184,7 +184,7 @@
 
   .FieldContainer {
     @extend %container;
-    background-color: $gray;
+    background-color: $grey;
 
     img {
       @extend %bookmark;
@@ -262,7 +262,7 @@
         font-size: 3vw;
 
         div {
-          background-color: hotpink;
+          background-color: $pink;
           color: white;
           display: inline-block;
           margin-right: 5%;
@@ -290,7 +290,7 @@
       button {
         display: block;
         width: 100%;
-        border-color: grey;
+        border-color: $grey;
         background-color: white;
         height: 3em;
         margin: 5% auto;
@@ -306,7 +306,8 @@
   }
 
   .Footer {
-    background-color: $gray;
+    position: relative;
+    background-color: $grey;
     display: grid;
 
     .Privacy {
@@ -314,6 +315,17 @@
       margin-left: 0.5em;
       font-family: "GREG";
       font-size: 2vw;
+    }
+
+    .BackTop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: black;
+      color: white;
+      width: 3em;
+      height: 3em;
+      font-size: 4vw;
     }
 
     img {
