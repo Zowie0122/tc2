@@ -1,0 +1,323 @@
+@media only screen and (min-width: 980px) {
+  %l_navbar_contents {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: red;
+    border: none;
+    font-family: "DIN";
+    font-size: 5vw;
+  }
+
+  %l_container {
+    width: 100%;
+    margin-top: 2%;
+    padding: 8% 0;
+  }
+
+  %l_container-h2 {
+    font-family: "DIN";
+    font-size: 2.5vw;
+    margin: 3% 10%;
+  }
+
+  %l_container-p {
+    font-family: "GMEDIUM";
+    white-space: pre-wrap;
+    font-size: 1.5vw;
+    margin: 0% 10%;
+  }
+
+  %l_container-box-h3 {
+    font-family: "GLIGHT";
+    font-size: 1.5vw;
+  }
+
+  %l_container-box-p {
+    text-align: left;
+    margin: 5%;
+    font-family: "GLIGHT";
+    font-size: 1.2vw;
+  }
+
+  %l_section-button {
+    margin: 5% 0 2% 0;
+    background-color: black;
+    width: 30%;
+    height: 2em;
+    color: white;
+    border: none;
+    padding: 0px;
+    font-family: "DIN";
+    font-size: 2vw;
+
+    &:hover {
+      background-color: $darkRed;
+    }
+  }
+
+  %l_box {
+    margin-top: 10%;
+    width: 100%;
+  }
+
+  %l_bookmark {
+    width: 3%;
+  }
+
+  .App {
+    text-align: center;
+  }
+
+  .MobileButton {
+    display: none;
+  }
+
+  .NavbarContainer {
+    .NavbarSmall {
+      display: none;
+    }
+
+    .NavbarLarge {
+      width: 100%;
+      .BGImage {
+        background-color: lightgrey;
+
+        z-index: 0;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .NavbarTags {
+        background-color: white;
+        margin: auto 10%;
+        width: 80%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 15% 15% 10% 10% 10% 10% 10% 20%;
+        grid-template-rows: 100%;
+        top: 0;
+        position: absolute;
+        height: 5em;
+        .Logo {
+          width: 80%;
+          margin: auto;
+          padding: 0 10%;
+        }
+
+        .Tab {
+          border: none;
+          font-family: "DIN";
+          font-size: 2vw;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:hover {
+            background-color: $darkRed;
+            color: white;
+          }
+        }
+
+        .emailLogo {
+          background-color: $darkRed;
+          height: 100%;
+          img {
+            width: 40%;
+          }
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .Tel {
+          color: white;
+          height: 100%;
+          background-color: $vividRed;
+          font-family: "DIN";
+          font-size: 2.5vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .AboutUsContainer {
+    @extend %l_container;
+
+    img {
+      @extend %l_bookmark;
+    }
+
+    h2 {
+      @extend %l_container-h2;
+    }
+    p {
+      @extend %l_container-p;
+    }
+
+    button {
+      @extend %l_section-button;
+    }
+  }
+
+  .FieldContainer {
+    @extend %l_container;
+    background-color: $gray;
+
+    img {
+      @extend %l_bookmark;
+    }
+
+    h2 {
+      @extend %l_container-h2;
+    }
+
+    p {
+      @extend %l_container-p;
+    }
+
+    .FieldBoxesContainer {
+      margin: 0 10%;
+      display: inline-grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 5%;
+
+      .FieldBox {
+        @extend %l_box;
+        display: grid;
+        grid-template-rows: 30%, 35%, 35%;
+        background-color: white;
+
+        h3 {
+          @extend %l_container-box-h3;
+        }
+
+        p {
+          @extend %l_container-box-p;
+        }
+
+        button {
+          background-color: black;
+          width: 100%;
+          height: 3em;
+          color: white;
+          border: none;
+          padding: 0;
+          font-family: "GMEDIUM";
+          font-size: 1.5vw;
+          &:hover {
+            background-color: $darkRed;
+          }
+        }
+      }
+    }
+  }
+
+  .BlogContainer {
+    @extend %l_container;
+
+    img {
+      @extend %l_bookmark;
+    }
+
+    h2 {
+      @extend %l_container-h2;
+    }
+    .BlogBoxesContainer {
+      margin: 0 10%;
+      display: inline-grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 5%;
+    }
+
+    .BlogBox {
+      @extend %l_box;
+      grid-template-rows: 1.5rem, 6rem, 4rem, 5rem, 2.5rem;
+
+      .blogTagDate {
+        text-align: left;
+        font-size: 1.5vw;
+        div {
+          background-color: hotpink;
+          color: white;
+          display: inline-block;
+          margin-right: 5%;
+        }
+        p {
+          display: inline-block;
+          font-size: 1.5vw;
+        }
+      }
+
+      .BlogImage {
+        width: 100%;
+      }
+
+      h3 {
+        text-align: left;
+        @extend %l_container-box-h3;
+      }
+
+      p {
+        @extend %l_container-box-p;
+        margin: 0;
+      }
+
+      button {
+        display: block;
+        width: 90%;
+        border-color: grey;
+        background-color: white;
+        height: 2.5em;
+        margin: 5% auto;
+        font-family: "DIN";
+        font-size: 2vw;
+        &hover {
+          background-color: $vividRed;
+          border: none;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .Footer {
+    width: 100%;
+    background-color: $gray;
+    display: grid;
+
+    .Privacy {
+      text-align: left;
+      margin-left: 2em;
+      font-family: "GREG";
+      font-size: 1vw;
+    }
+
+    img {
+      margin: 5% auto 2% 20%;
+      width: 10%;
+    }
+
+    .Address {
+      white-space: pre-wrap;
+      text-align: left;
+      margin: 0% auto 5% 20%;
+      font-family: "GREG";
+      font-size: 1vw;
+    }
+
+    .CopyRight {
+      font-size: 1vw;
+    }
+  }
+}

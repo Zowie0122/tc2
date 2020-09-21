@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import Navbar from "./components/Navbar";
+import AboutUs from "./components/AboutUs";
+import Field from "./components/Field";
+import Blog from "./components/Blog";
+import Map from "./components/Map";
+import Footer from "./components/Footer";
+import "./scss/main.scss";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <AboutUs />
+      <Field data-aos="fade-up" />
+      <Blog />
+      <hr />
+      <span>トップページ</span>
+      <Map
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        loadingElement={<div style={{ width: `100%` }} />}
+        containerElement={
+          <div
+            style={{
+              marginTop: "70px",
+              height: `600px`,
+              width: `100%`,
+            }}
+          />
+        }
+        mapElement={<div style={{ height: `100%` }} />}
+      />
+      <Footer data-aos="fade-up" />
     </div>
   );
 }
