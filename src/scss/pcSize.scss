@@ -267,8 +267,8 @@
 
     .blogBox {
       @extend %l_box;
-      display: grid;
-      grid-template-rows: 1fr, 4fr, 2fr, 5fr, 5fr;
+      display: inline-grid;
+      grid-template-rows: 1fr, 4fr, 3fr, 5fr, 5fr;
       padding: 5%;
       border-left: 5px solid $grey;
 
@@ -277,7 +277,7 @@
         font-size: 1.5vw;
 
         @for $i from 1 through 3 {
-          .Tag:nth-child(#{$i}) {
+          .tag:nth-child(#{$i}) {
             background-color: nth($tagColors, $i);
           }
         }
@@ -295,6 +295,7 @@
 
       .blogImage {
         width: 100%;
+        height: auto;
       }
 
       h3 {
