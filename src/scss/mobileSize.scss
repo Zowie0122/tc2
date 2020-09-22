@@ -141,22 +141,26 @@
         grid-row: 1;
         grid-column: 1 / span 2;
         @extend %navbar_contents;
+        border: 1px solid $grey;
       }
 
       .Field {
         grid-row: 2;
         grid-column: 1 / span 2;
         @extend %navbar_contents;
+        border: 1px solid $grey;
       }
       .Price {
         grid-row: 3;
         grid-column: 1 / span 2;
         @extend %navbar_contents;
+        border: 1px solid $grey;
       }
       .Blog {
         grid-row: 4;
         grid-column: 1 / span 2;
         @extend %navbar_contents;
+        border: 1px solid $grey;
       }
       .EmailLogo {
         grid-row: 5;
@@ -166,7 +170,7 @@
         justify-content: center;
         align-items: center;
         img {
-          height: 100%;
+          width: 20%;
         }
       }
       .TelLogo {
@@ -177,7 +181,7 @@
         justify-content: center;
         align-items: center;
         img {
-          height: 100%;
+          width: 20%;
         }
       }
     }
