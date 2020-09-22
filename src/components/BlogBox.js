@@ -20,7 +20,7 @@ function BlogBox({ tag, date, imgSrc, title, text }) {
       />
       <h3>{title}</h3>
       <p>{text}</p>
-      <a href="#" className="blogButton">
+      <a href="#blog" className="blogButton">
         MORE
       </a>
     </div>

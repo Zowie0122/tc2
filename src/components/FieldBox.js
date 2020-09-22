@@ -11,7 +11,7 @@ function FieldBox({ title, text }) {
     <div className="fieldBox" data-aos="zoom-in">
       <h3>{title}</h3>
       <p>{text}</p>
-      <a href="#" className="button">
+      <a href="#field" className="button">
         詳しくはこちら →
       </a>
     </div>

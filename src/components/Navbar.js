@@ -16,16 +16,16 @@ function Navbar() {
         <div className="navbarTags">
           <img src={companyLogo} alt="logo" className="logo" />
           <div></div>
-          <a href="#" className="tab">
+          <a href="#aboutus" className="tab">
             ABOUT US
           </a>
-          <a href="#" className="tab">
+          <a href="#field" className="tab">
             FIELD
           </a>
-          <a href="#" className="tab">
+          <a href="#price" className="tab">
             PRICE
           </a>
-          <a href="#" className="tab">
+          <a href="#blog" className="tab">
             BLOG
           </a>
           <div className="emailLogo">
@@ -42,11 +42,9 @@ function Navbar() {
           <img src={companyLogo} alt="logo" className="logo" />
           <button
             className="threeLines"
-            onClick={() => {
-              setFoldNavbar(!foldNavbar);
-            }}
+            onClick={() => setFoldNavbar(!foldNavbar)}
           >
-            ///
+            {`///`}
           </button>
         </div>
 
@@ -58,16 +56,16 @@ function Navbar() {
 
         {!foldNavbar && (
           <div className="dropDown">
-            <a href="#" className="aboutUs">
+            <a href="#aboutus" className="aboutUs">
               ABOUT US
             </a>
-            <a href="#" className="field">
+            <a href="#field" className="field">
               FIELD
             </a>
-            <a href="#" className="price">
+            <a href="#price" className="price">
               PRICE
             </a>
-            <a href="#" className="blog">
+            <a href="#blog" className="blog">
               BLOG
             </a>
             <div className="emailLogo">

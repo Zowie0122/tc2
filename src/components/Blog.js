@@ -35,7 +35,7 @@ function Blog() {
           );
         })}
       </div>
-      <a href="#" className="mobileButton" data-aos="fade-up">
+      <a href="#blog" className="mobileButton" data-aos="fade-up">
         BLOG
       </a>
     </div>

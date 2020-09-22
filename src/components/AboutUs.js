@@ -20,7 +20,7 @@ function AboutUs() {
           }
         </p>
       </div>
-      <a href="#" className="button" data-aos="fade-up">
+      <a href="#aboutus" className="button" data-aos="fade-up">
         ABOUT US
       </a>
     </div>
