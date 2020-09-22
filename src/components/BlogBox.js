@@ -10,8 +10,8 @@ function BlogBox({ tag, date, imgSrc, title, text }) {
   return (
     <div className="BlogBox" data-aos="zoom-in">
       <div className="blogTagDate">
-        <div>{tag}</div>
-        <p>{date}</p>
+        <div className="Tag">{tag}</div>
+        <p className="Date">{date}</p>
       </div>
       <img
         src={require(`../images/${imgSrc}.png`)}

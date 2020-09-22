@@ -12,21 +12,20 @@
 
   %l_container {
     width: 100%;
-    margin-top: 2%;
     padding: 8% 0;
   }
 
   %l_container-h2 {
     font-family: "DIN";
-    font-size: 2.5vw;
-    margin: 3% 10%;
+    font-size: 3vw;
+    margin: 2% 10%;
   }
 
   %l_container-p {
     font-family: "GMEDIUM";
     white-space: pre-wrap;
     font-size: 1.5vw;
-    margin: 0% 10%;
+    margin: 2% 10%;
   }
 
   %l_container-box-h3 {
@@ -36,13 +35,13 @@
 
   %l_container-box-p {
     text-align: left;
-    margin: 5%;
+    padding: 0;
     font-family: "GLIGHT";
     font-size: 1.2vw;
   }
 
   %l_section-button {
-    margin: 5% 0 2% 0;
+    margin: 2% 0 auto 0;
     background-color: black;
     width: 30%;
     height: 2em;
@@ -58,7 +57,6 @@
   }
 
   %l_box {
-    margin-top: 10%;
     width: 100%;
   }
 
@@ -81,13 +79,35 @@
 
     .NavbarLarge {
       width: 100%;
-      .BGImage {
-        background-color: $lightGrey;
 
+      .BGImage {
+        width: 100%;
+        height: auto;
+        position: relative;
         z-index: 0;
         img {
           width: 100%;
           height: auto;
+          position: relative;
+          animation-name: move;
+          animation-duration: 5s;
+          animation-fill-mode: forwards;
+
+          @keyframes move {
+            0% {
+              left: 100%;
+              filter: brightness(0);
+              background-color: black;
+            }
+            30% {
+              left: -100%;
+              filter: brightness(0);
+              background-color: black;
+            }
+            100% {
+              left: 0%;
+            }
+          }
         }
       }
 
@@ -195,7 +215,7 @@
       .FieldBox {
         @extend %l_box;
         display: grid;
-        grid-template-rows: 30%, 35%, 35%;
+        grid-template-rows: 1fr 3fr 0.5fr;
         background-color: white;
 
         h3 {
@@ -210,9 +230,9 @@
           background-color: black;
           width: 100%;
           height: 3em;
+          margin: auto 0 0 auto;
           color: white;
           border: none;
-          padding: 0;
           font-family: "GMEDIUM";
           font-size: 1.5vw;
           &:hover {
@@ -238,24 +258,36 @@
       display: inline-grid;
       grid-template-columns: auto auto auto;
       grid-gap: 5%;
+      :last-child {
+        border-right: 5px solid $grey;
+      }
     }
 
     .BlogBox {
       @extend %l_box;
-      grid-template-rows: 1.5rem, 6rem, 4rem, 5rem, 2.5rem;
+      display: grid;
+      grid-template-rows: 1fr, 4fr, 2fr, 5fr, 5fr;
+      padding: 5%;
+      border-left: 5px solid $grey;
 
       .blogTagDate {
         text-align: left;
         font-size: 1.5vw;
-        div {
-          background-color: $pink;
+
+        @for $i from 1 through 3 {
+          .Tag:nth-child(#{$i}) {
+            background-color: nth($tagColors, $i);
+          }
+        }
+
+        .Tag {
           color: white;
           display: inline-block;
           margin-right: 5%;
         }
-        p {
+        .Date {
           display: inline-block;
-          font-size: 1.5vw;
+          border-right: none;
         }
       }
 
@@ -270,7 +302,7 @@
 
       p {
         @extend %l_container-box-p;
-        margin: 0;
+        // margin: 0 0 auto 0;
       }
 
       button {
@@ -279,7 +311,7 @@
         border-color: $lightGrey;
         background-color: white;
         height: 2.5em;
-        margin: 5% auto;
+        margin: auto auto 0 auto;
         font-family: "DIN";
         font-size: 2vw;
         &hover {

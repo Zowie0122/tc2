@@ -90,10 +90,10 @@
         .Logo {
           align-self: flex-start;
           width: 20%;
-          margin: auto;
+          margin: auto auto auto 5%;
         }
         .ThreeLines {
-          margin: auto;
+          margin: auto 5% auto auto;
           font-size: 10vw;
           background-color: white;
           border: none;
@@ -101,12 +101,33 @@
       }
 
       .MobileBGImage {
-        background-color: lightgrey;
-
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 0;
         img {
-          width: 100vw;
+          width: 100%;
           height: auto;
-          z-index: -9999;
+          position: relative;
+          animation-name: move;
+          animation-duration: 5s;
+          animation-fill-mode: forwards;
+
+          @keyframes move {
+            0% {
+              left: 100%;
+              filter: brightness(0);
+              background-color: black;
+            }
+            30% {
+              left: -100%;
+              filter: brightness(0);
+              background-color: black;
+            }
+            100% {
+              left: 0%;
+            }
+          }
         }
       }
 
@@ -259,18 +280,23 @@
 
       .blogTagDate {
         text-align: left;
-        font-size: 3vw;
+        font-size: 4vw;
 
-        div {
-          background-color: $pink;
+        @for $i from 1 through 3 {
+          .Tag:nth-child(#{$i}) {
+            background-color: nth($tagColors, $i);
+          }
+        }
+
+        .Tag {
           color: white;
           display: inline-block;
           margin-right: 5%;
+          padding: 1%;
         }
 
-        p {
+        .Date {
           display: inline-block;
-          font-size: 3vw;
         }
       }
 
