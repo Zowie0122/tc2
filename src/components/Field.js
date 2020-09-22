@@ -12,23 +12,26 @@ function Field() {
   }, []);
 
   return (
-    <div className="FieldContainer" data-aos="fade-up">
+    <div className="fieldContainer" data-aos="fade-up">
       <img src={bookmark} alt="bookmark" data-aos="fade-up" />
 
       <h2 data-aos="fade-up">{textContent.field.fieldTitle}</h2>
-      <p className="aboutUsIntoText" data-aos="fade-up">
-        {textContent.field.fieldIntro}
-      </p>
-
-      <div className="FieldBoxesContainer">
+      <p data-aos="fade-up">{textContent.field.fieldIntro}</p>
+      <div className="fieldBoxesContainer">
         {" "}
         {textContent.field.fieldBoxs.map((fieldBox) => {
-          return <FieldBox title={fieldBox.title} text={fieldBox.text} />;
+          return (
+            <FieldBox
+              key={fieldBox.title}
+              title={fieldBox.title}
+              text={fieldBox.text}
+            />
+          );
         })}
       </div>
-      <button className="MobileButton" data-aos="fade-up">
+      <a href="#" className="mobileButton" data-aos="fade-up">
         BUSINESS FIELD
-      </button>
+      </a>
     </div>
   );
 }

@@ -8,10 +8,12 @@ function FieldBox({ title, text }) {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <div className="FieldBox" data-aos="zoom-in">
+    <div className="fieldBox" data-aos="zoom-in">
       <h3>{title}</h3>
       <p>{text}</p>
-      <button>詳しくはこちら →</button>
+      <a href="#" className="button">
+        詳しくはこちら →
+      </a>
     </div>
   );
 }

@@ -8,32 +8,40 @@ import "../scss/main.scss";
 function Navbar() {
   const [foldNavbar, setFoldNavbar] = useState(true);
   return (
-    <div className="NavbarContainer">
-      <div className="NavbarLarge">
-        <div className="BGImage">
+    <div className="navbarContainer">
+      <div className="navbarLarge">
+        <div className="bgImage">
           <img src={companyCoverPhoto} alt="company cover" />
         </div>
-        <div className="NavbarTags">
-          <img src={companyLogo} alt="logo" className="Logo" />
+        <div className="navbarTags">
+          <img src={companyLogo} alt="logo" className="logo" />
           <div></div>
-          <div className="Tab">ABOUT US</div>
-          <div className="Tab">FIELD</div>
-          <div className="Tab">PRICE</div>
-          <div className="Tab">BLOG</div>
+          <a href="#" className="tab">
+            ABOUT US
+          </a>
+          <a href="#" className="tab">
+            FIELD
+          </a>
+          <a href="#" className="tab">
+            PRICE
+          </a>
+          <a href="#" className="tab">
+            BLOG
+          </a>
           <div className="emailLogo">
             <img src={emailLogo} alt="email" />
           </div>
-          <div className="Tel">
+          <div className="tel">
             <span>03-6416-1606</span>
           </div>
         </div>
       </div>
 
-      <div className="NavbarSmall">
-        <div className="LogoButton">
-          <img src={companyLogo} alt="logo" className="Logo" />
+      <div className="navbarSmall">
+        <div className="logoButton">
+          <img src={companyLogo} alt="logo" className="logo" />
           <button
-            className="ThreeLines"
+            className="threeLines"
             onClick={() => {
               setFoldNavbar(!foldNavbar);
             }}
@@ -43,21 +51,29 @@ function Navbar() {
         </div>
 
         {foldNavbar && (
-          <div className="MobileBGImage">
+          <div className="mobileBGImage">
             <img src={companyCoverPhoto} alt="company cover" />
           </div>
         )}
 
         {!foldNavbar && (
-          <div className="DropDown">
-            <div className="AboutUs">ABOUT US</div>
-            <div className="Field">FIELD</div>
-            <div className="Price">PRICE</div>
-            <div className="Blog">BLOG</div>
-            <div className="EmailLogo">
+          <div className="dropDown">
+            <a href="#" className="aboutUs">
+              ABOUT US
+            </a>
+            <a href="#" className="field">
+              FIELD
+            </a>
+            <a href="#" className="price">
+              PRICE
+            </a>
+            <a href="#" className="blog">
+              BLOG
+            </a>
+            <div className="emailLogo">
               <img src={emailLogo} alt="email" />
             </div>
-            <div className="TelLogo">
+            <div className="telLogo">
               <img src={tel} alt="tel" />
             </div>
           </div>

@@ -10,14 +10,14 @@ function Footer() {
   }
 
   return (
-    <div className="Footer">
-      <p className="Privacy">プライバシーポリシー</p>
-      <button className="BackTop" onClick={() => scrollToTop()}>
+    <div className="footer">
+      <p className="privacy">プライバシーポリシー</p>
+      <button className="backTop" onClick={() => scrollToTop()}>
         ↑
       </button>
       <img src={logo} alt="company logo" />
-      <p className="Address">{textContent.footer.address}</p>
-      <p className="CopyRight">{textContent.footer.copyRight}</p>
+      <p className="address">{textContent.footer.address}</p>
+      <p className="copyRight">{textContent.footer.copyRight}</p>
     </div>
   );
 }

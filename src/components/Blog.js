@@ -12,19 +12,20 @@ function Blog() {
   }, []);
 
   return (
-    <div className="BlogContainer" data-aos="fade-up">
+    <div className="blogContainer" data-aos="fade-up">
       <img
         src={bookmark}
         alt="bookmark"
         data-aos="fade-up"
-        className="GapImage"
+        className="gapImage"
       />
       <h2 data-aos="fade-up">BLOG</h2>
-      <div className="BlogBoxesContainer">
+      <div className="blogBoxesContainer">
         {" "}
         {textContent.blogs.map((blog) => {
           return (
             <BlogBox
+              key={blog.title}
               tag={blog.tag}
               date={blog.date}
               imgSrc={blog.imgSrc}
@@ -34,9 +35,9 @@ function Blog() {
           );
         })}
       </div>
-      <button className="MobileButton" data-aos="fade-up">
+      <a href="#" className="mobileButton" data-aos="fade-up">
         BLOG
-      </button>
+      </a>
     </div>
   );
 }

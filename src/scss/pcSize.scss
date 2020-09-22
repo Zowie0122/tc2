@@ -41,7 +41,7 @@
   }
 
   %l_section-button {
-    margin: 2% 0 auto 0;
+    margin: 2% auto auto;
     background-color: black;
     width: 30%;
     height: 2em;
@@ -50,6 +50,10 @@
     padding: 0px;
     font-family: "DIN";
     font-size: 2vw;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
       background-color: $darkRed;
@@ -68,19 +72,19 @@
     text-align: center;
   }
 
-  .MobileButton {
+  .mobileButton {
     display: none;
   }
 
-  .NavbarContainer {
-    .NavbarSmall {
+  .navbarContainer {
+    .navbarSmall {
       display: none;
     }
 
-    .NavbarLarge {
+    .navbarLarge {
       width: 100%;
 
-      .BGImage {
+      .bgImage {
         width: 100%;
         height: auto;
         position: relative;
@@ -111,7 +115,7 @@
         }
       }
 
-      .NavbarTags {
+      .navbarTags {
         background-color: white;
         margin: auto 10%;
         width: 80%;
@@ -122,13 +126,13 @@
         top: 0;
         position: absolute;
         height: 5em;
-        .Logo {
+        .logo {
           width: 80%;
           margin: auto;
           padding: 0 10%;
         }
 
-        .Tab {
+        .tab {
           border: none;
           font-family: "DIN";
           font-size: 2vw;
@@ -136,6 +140,8 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          text-decoration: none;
+          color: black;
 
           &:hover {
             background-color: $darkRed;
@@ -154,7 +160,7 @@
           align-items: center;
         }
 
-        .Tel {
+        .tel {
           color: white;
           height: 100%;
           background-color: $vividRed;
@@ -171,7 +177,7 @@
     }
   }
 
-  .AboutUsContainer {
+  .aboutUsContainer {
     @extend %l_container;
 
     img {
@@ -185,12 +191,12 @@
       @extend %l_container-p;
     }
 
-    button {
+    .button {
       @extend %l_section-button;
     }
   }
 
-  .FieldContainer {
+  .fieldContainer {
     @extend %l_container;
     background-color: $grey;
 
@@ -206,13 +212,13 @@
       @extend %l_container-p;
     }
 
-    .FieldBoxesContainer {
+    .fieldBoxesContainer {
       margin: 0 10%;
       display: inline-grid;
       grid-template-columns: auto auto auto;
       grid-gap: 5%;
 
-      .FieldBox {
+      .fieldBox {
         @extend %l_box;
         display: grid;
         grid-template-rows: 1fr 3fr 0.5fr;
@@ -226,24 +232,20 @@
           @extend %l_container-box-p;
         }
 
-        button {
-          background-color: black;
+        .button {
+          @extend %l_section-button;
+
           width: 100%;
           height: 3em;
           margin: auto 0 0 auto;
           color: white;
-          border: none;
-          font-family: "GMEDIUM";
           font-size: 1.5vw;
-          &:hover {
-            background-color: $darkRed;
-          }
         }
       }
     }
   }
 
-  .BlogContainer {
+  .blogContainer {
     @extend %l_container;
 
     img {
@@ -253,7 +255,7 @@
     h2 {
       @extend %l_container-h2;
     }
-    .BlogBoxesContainer {
+    .blogBoxesContainer {
       margin: 0 10%;
       display: inline-grid;
       grid-template-columns: auto auto auto;
@@ -263,7 +265,7 @@
       }
     }
 
-    .BlogBox {
+    .blogBox {
       @extend %l_box;
       display: grid;
       grid-template-rows: 1fr, 4fr, 2fr, 5fr, 5fr;
@@ -280,18 +282,18 @@
           }
         }
 
-        .Tag {
+        .tag {
           color: white;
           display: inline-block;
           margin-right: 5%;
         }
-        .Date {
+        .date {
           display: inline-block;
           border-right: none;
         }
       }
 
-      .BlogImage {
+      .blogImage {
         width: 100%;
       }
 
@@ -302,43 +304,46 @@
 
       p {
         @extend %l_container-box-p;
-        // margin: 0 0 auto 0;
       }
 
-      button {
+      .blogButton {
         display: block;
         width: 90%;
-        border-color: $lightGrey;
+        border: 3px solid $darkGrey;
         background-color: white;
         height: 2.5em;
         margin: auto auto 0 auto;
         font-family: "DIN";
         font-size: 2vw;
-        &hover {
-          background-color: $vividRed;
-          border: none;
+        color: black;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background-color: $darkRed;
+          border: 3px solid $darkRed;
           color: white;
         }
       }
     }
   }
 
-  .Footer {
+  .footer {
     width: 100%;
     background-color: $grey;
     display: grid;
     position: relative;
 
-    .Privacy {
+    .privacy {
       bottom: 2em;
       right: 2em;
       position: absolute;
-
       font-family: "GREG";
       font-size: 1vw;
     }
 
-    .BackTop {
+    .backTop {
       position: absolute;
       top: 0;
       right: 0;
@@ -347,6 +352,10 @@
       width: 2em;
       height: 2em;
       font-size: 3vw;
+      border: 0;
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     img {
@@ -354,15 +363,14 @@
       width: 10%;
     }
 
-    .Address {
+    .address {
       white-space: pre-wrap;
       text-align: left;
       margin: 0% auto 5% 20%;
       font-family: "GREG";
       font-size: 1vw;
     }
-
-    .CopyRight {
+    .copyRight {
       font-size: 1vw;
     }
   }

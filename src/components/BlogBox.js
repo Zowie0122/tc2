@@ -8,19 +8,21 @@ function BlogBox({ tag, date, imgSrc, title, text }) {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <div className="BlogBox" data-aos="zoom-in">
+    <div className="blogBox" data-aos="zoom-in">
       <div className="blogTagDate">
-        <div className="Tag">{tag}</div>
-        <p className="Date">{date}</p>
+        <div className="tag">{tag}</div>
+        <p className="date">{date}</p>
       </div>
       <img
         src={require(`../images/${imgSrc}.png`)}
-        className="BlogImage"
-        alt="BlogImage"
+        className="blogImage"
+        alt="blogImage"
       />
       <h3>{title}</h3>
       <p>{text}</p>
-      <button>MORE</button>
+      <a href="#" className="blogButton">
+        MORE
+      </a>
     </div>
   );
 }

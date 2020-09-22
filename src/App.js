@@ -27,7 +27,7 @@ function App() {
         containerElement={
           <div
             style={{
-              marginTop: "70px",
+              marginTop: "20px",
               height: `600px`,
               width: `100%`,
             }}

@@ -10,7 +10,7 @@ function AboutUs() {
   }, []);
 
   return (
-    <div className="AboutUsContainer">
+    <div className="aboutUsContainer">
       <img src={bookmark} alt="bookmark" data-aos="fade-up" />
       <div>
         <h2 data-aos="fade-up">T2C.inc FOR EXCEED</h2>
@@ -20,7 +20,9 @@ function AboutUs() {
           }
         </p>
       </div>
-      <button data-aos="fade-up">ABOUT US</button>
+      <a href="#" className="button" data-aos="fade-up">
+        ABOUT US
+      </a>
     </div>
   );
 }
